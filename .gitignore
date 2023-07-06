@@ -8,3 +8,10 @@ data/train.zip
 
 #Models
 Dogs-Cats/model.pth
+MoneyBrinterBRR/data/asset_details.csv
+MoneyBrinterBRR/data/example_sample_submission.csv
+MoneyBrinterBRR/data/example_test.csv
+MoneyBrinterBRR/data/supplemental_train.csv
+MoneyBrinterBRR/data/train.csv
+MoneyBrinterBRR/data/gresearch_crypto/__init__.py
+MoneyBrinterBRR/data/gresearch_crypto/competition.cpython-37m-x86_64-linux-gnu.so
