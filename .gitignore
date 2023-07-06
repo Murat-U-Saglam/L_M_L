@@ -1,0 +1,10 @@
+#VENV
+venv/
+
+#Images
+Dogs-Cats/data
+data/test1.zip
+data/train.zip
+
+#Models
+Dogs-Cats/model.pth
