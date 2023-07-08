@@ -13,3 +13,7 @@ models/
 
 
 
+MoneyBrinterBRR/.env
+MoneyBrinterBRR/v4.1/features.json
+MoneyBrinterBRR/v4.1/train.parquet
+MoneyBrinterBRR/v4.1/validation.parquet
