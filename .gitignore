@@ -3,17 +3,23 @@ venv/
 
 #Data
 Dogs-Cats/data
-
-
 MoneyBrinterBRR/data
 
 #Models
 models/
 
-
-
-
 MoneyBrinterBRR/.env
 MoneyBrinterBRR/v4.1/features.json
 MoneyBrinterBRR/v4.1/train.parquet
 MoneyBrinterBRR/v4.1/validation.parquet
+supervised/Dogs-Cats/data/
+
+supervised/MoneyBrinterBRR/__pycache__/utils.cpython-310.pyc
+supervised/MoneyBrinterBRR/v4.1/features.json
+supervised/MoneyBrinterBRR/v4.1/live_int8_524.parquet
+supervised/MoneyBrinterBRR/v4.1/train_int8.parquet
+supervised/MoneyBrinterBRR/v4.1/train.parquet
+supervised/MoneyBrinterBRR/v4.1/validation_example_preds.parquet
+supervised/MoneyBrinterBRR/v4.1/validation_int8.parquet
+supervised/MoneyBrinterBRR/v4.1/validation.parquet
+supervised/MoneyBrinterBRR/.env
