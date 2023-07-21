@@ -20,3 +20,5 @@ supervised/MoneyBrinterBRR/.env
 FHE/main.py
 
 supervised/Dogs-Cats/core.python*
+pyproject.toml
+.vscode/settings.json
