@@ -2,23 +2,26 @@
 venv/
 
 #Data
-Dogs-Cats/data
-MoneyBrinterBRR/data
-
-#Models
-models/
-
-MoneyBrinterBRR/.env
-MoneyBrinterBRR/v4.1/features.json
-MoneyBrinterBRR/v4.1/train.parquet
-MoneyBrinterBRR/v4.1/validation.parquet
 supervised/Dogs-Cats/data/
+supervised/NumerAI/data
 
-supervised/MoneyBrinterBRR/__pycache__/
-supervised/MoneyBrinterBRR/v4.1
-supervised/MoneyBrinterBRR/.env
-FHE/main.py
 
+#Compiled source
+supervised/NumerAI/__pycache__/
+supervised/NumerAI/v4.1
+supervised/NumerAI/.env
 supervised/Dogs-Cats/core.python*
+
+#IDE Settings
 pyproject.toml
 .vscode/settings.json
+
+
+
+#Local env variables
+supervised/NumerAI/.env
+
+#Models
+APP/RealtimeObjectDetection/models/objectDetection/yolov8n.pt
+supervised/NumerAI/models/
+APP/Cifar10/*.h5
