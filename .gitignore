@@ -25,3 +25,4 @@ supervised/NumerAI/.env
 APP/RealtimeObjectDetection/models/objectDetection/yolov8n.pt
 supervised/NumerAI/models/
 APP/Cifar10/*.h5
+supervised/Dogs-Cats/*

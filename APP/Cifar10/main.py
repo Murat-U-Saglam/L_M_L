@@ -6,7 +6,7 @@ import tensorflow as tf
 from PIL import Image
 
 
-def main():
+def main() -> None:
     st.title("Cifar10 Classification")
     st.write("Upload an image, let me classify it for you")
     file = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"], key="image")

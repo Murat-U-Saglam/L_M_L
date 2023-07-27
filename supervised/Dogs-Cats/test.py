@@ -47,6 +47,7 @@ image_size = (256, 256)
 learning_rate = 1e-3
 epochs = 300
 val_ratio = 0.2
+number_of_workers = 16
 
 # Data transformations
 transform = transforms.Compose([
@@ -66,10 +67,12 @@ train_size = dataset_size - val_size
 # Split the dataset into training and validation sets
 train_dataset, val_dataset = random_split(train_data, [train_size, val_size])
 
+
+
 # Create data loaders for training, validation, and test sets
-train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
-test_dataloader = DataLoader(test_data, batch_size=batch_size, shuffle=False)
+train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=number_of_workers)
+val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=number_of_workers)
+test_dataloader = DataLoader(test_data, batch_size=batch_size, shuffle=False, num_workers=number_of_workers)
 
 class CNNModel(nn.Module):
     def __init__(self):
@@ -102,7 +105,6 @@ class CNNModel(nn.Module):
 
 # Initialize the model and move it to the device
 model = CNNModel().to(device)
-
 loss_fn = nn.BCEWithLogitsLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
@@ -111,6 +113,7 @@ def train_model(model, dataloader, loss_fn, optimizer, device):
     running_loss = 0.0
     for images, labels in dataloader:
         images, labels = images.to(device), labels.to(device)
+
         optimizer.zero_grad()
         outputs = model(images)
         loss = loss_fn(outputs, labels)
@@ -153,10 +156,6 @@ for epoch in range(epochs):
     print(f"Epoch [{epoch+1}/{epochs}], Test Accuracy: {accuracy:.2f}%")
 print("Training Done!")
 
-# Save the model with the highest accuracy
-model_path = f"../models/dogs-cats/dogs-cats-cnn.pth-accuracy-{accuracy:.2f}"
-torch.save(model.state_dict(), model_path)
-print(f"Saved PyTorch Model State to {model_path}")
 
 # Load the model with the highest accuracy
 model = CNNModel().to(device)
